@@ -1,0 +1,9 @@
+"C:\Program Files\Java\jdk1.8.0_102\bin\keytool" -genkey -v -keystore chandler.keystore -alias chandler -keyalg RSA -keysize 2048 -validity 10000
+
+
+"C:\Program Files\Java\jdk1.8.0_102\bin\jarsigner" -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore chandler.keystore build\outputs\apk\android-release-unsigned.apk chandler
+
+
+chandler@123
+
+"F:\Android\android-sdk\build-tools\23.0.1\zipalign" -v 4 build\outputs\apk\android-release-unsigned.apk build\outputs\apk\chandler.apk

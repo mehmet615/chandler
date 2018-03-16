@@ -1,0 +1,339 @@
+<ion-view cache-view="false">
+  <ion-content class="has-header">
+    <h3 class="padding text-center">Report Form</h3>
+    <p class="padding-left padding-bottom"><span class="red-color">*</span> Indicates Required Fields</p>
+
+    <div class="list">
+
+      <div class="padding-left">First Name<span class="red-color">*</span></div>
+      <label class="item item-input">
+        <input type="text" ng-model="reportLossObj.fname" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+      </label>
+
+      <div class="padding-left">Last Name<span class="red-color">*</span></div>
+      <label class="item item-input">
+        <input type="text" ng-model="reportLossObj.lname" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+      </label>
+
+      <div class="padding-left">Phone Number<span class="red-color">*</span></div>
+      <label class="item item-input">
+        <input type="text" ng-model="reportLossObj.phone" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+      </label>
+
+      <div class="padding-left">Email Address<span class="red-color">*</span></div>
+      <label class="item item-input">
+        <input type="text" ng-model="reportLossObj.email" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+      </label>
+
+      <div class="padding-left">Company</div>
+      <label class="item item-input">
+        <input type="text" ng-model="reportLossObj.company" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+      </label>
+
+      <div class="padding-left">Position in Company</div>
+      <label class="item item-input">
+        <input type="text" ng-model="reportLossObj.position_in_company" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+      </label>
+      <div class="padding-left">Is This an Emergency<span class="red-color">*</span></div>
+      <div style="padding-bottom: 16px;">
+        <span style="padding-left: 21px;">
+          <input type="radio" name="isEmergency" ng-model="reportLossObj.is_emergency" value="Yes" style="margin-top: 7px;">
+          <label style="padding-left: 5px;">Yes</label>
+        </span>
+
+        <span style="padding-left: 21px;">
+          <input type="radio" name="isEmergency" ng-model="reportLossObj.is_emergency" value="No" style="margin-top: 7px;">
+          <label style="padding-left: 5px;">No</label>
+        </span>
+      </div>
+
+      <div class="padding-left">Are You the Property Owner?<span class="red-color">*</span></div>
+      <div style="padding-bottom: 16px;">
+        <span style="padding-left: 21px;">
+          <input type="radio" name="isOwner" ng-model="reportLossObj.is_property_owner" value="Yes" style="margin-top: 7px;">
+          <label style="padding-left: 5px;">Yes</label>
+        </span>
+
+        <span style="padding-left: 21px;">
+          <input type="radio" name="isOwner" ng-model="reportLossObj.is_property_owner" value="No" style="margin-top: 7px;">
+          <label style="padding-left: 5px;">No</label>
+        </span>
+      </div>
+
+      <div class="padding-left">If No, Property Owner Name<span ng-if="reportLossObj.is_property_owner=='No'" class="red-color">*</span></div>
+      <label class="item item-input">
+        <textarea ng-disabled="reportLossObj.is_property_owner!='No'" rows="4" ng-model="reportLossObj.property_owner_name" next-on-enter ng-focus="hideTab()" ng-blur="showTab()"></textarea>
+      </label>
+
+      <div class="padding-left">Are You an Insurance Professional?<span class="red-color">*</span></div>
+      <div style="padding-bottom: 16px;">
+        <span style="padding-left: 21px;">
+          <input type="radio" name="isProfessional" ng-model="reportLossObj.is_insurance_professional" value="Yes" style="margin-top: 7px;">
+          <label style="padding-left: 5px;">Yes</label>
+        </span>
+
+        <span style="padding-left: 21px;">
+          <input type="radio" name="isProfessional" ng-model="reportLossObj.is_insurance_professional" value="No" style="margin-top: 7px;">
+          <label style="padding-left: 5px;">No</label>
+        </span>
+      </div>
+
+      <form>
+        <fieldset>
+          <legend> <span style="padding: 0 3px;background: #fff;"><strong>Damaged Property</strong><span class="red-color">*</span></span> </legend>
+          <div class="padding-left">Address 1<span class="red-color">*</span></div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.damaged_property_address1" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">Address 2</div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.damaged_property_address2" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">City<span class="red-color">*</span></div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.damaged_property_city" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">State<span class="red-color">*</span></div>
+          <select name="Year" ng-model="reportLossObj.damaged_property_state">
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="District Of Columbia">District Of Columbia</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+          </select>
+
+          <div class="padding-left" style="padding-top:16px">Zip<span class="red-color">*</span></div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.damaged_property_zip" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+        </fieldset>
+      </form>
+
+      <div class="padding-left" style="padding-top:16px">Loss Location Type<span class="red-color">*</span></div>
+       <select name="loss" ng-model="reportLossObj.loss_location_type">
+        <option value="Commercial">Commercial</option>
+        <option value="Industrial">Industrial</option>
+        <option value="Residential">Residential</option>
+      </select>
+
+      <div class="padding-left" style="padding-top:16px">Type of Loss<span class="red-color">*</span></div>
+       <select name="type" ng-model="reportLossObj.type_of_loss">
+        <option value="Hail">Hail</option>
+        <option value="Water">Water</option>
+        <option value="Fire">Fire</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <div class="padding-left" style="padding-top:16px">Details of Damage</div>
+      <label class="item item-input">
+        <textarea rows="4" ng-model="reportLossObj.detail_of_damage" next-on-enter ng-focus="hideTab()" ng-blur="showTab()"></textarea>
+      </label>
+
+      <!-- <div class="padding-left">Pictures of Damage</div> -->
+      <!-- <label class="item item-input">
+        <input type="file">
+      </label>
+
+      <label class="item item-input">
+        <input type="file">
+      </label>
+
+      <label class="item item-input">
+        <input type="file">
+      </label> -->
+      <fieldset>
+        <legend> <span style="padding: 0 3px;background: #fff;"><strong>Pictures of Damage</strong></span> </legend>
+        <button class="button button-block button-positive black" style="background-color: #d2d2d2 !important;" ng-click="getPicture('pic1')" ng-hide="reportLossObj.pic1" ng-model="reportLossObj.pic1">Attach Image 1</button>
+        <div class="text-center" ng-show="reportLossObj.pic1">
+          <img ng-src="{{reportLossObj.pic1}}"  height="270" width="300">
+        </div>
+        <button class="button button-block button-positive black" style="background-color: #d2d2d2 !important;" ng-click="getPicture('pic2')" ng-hide="reportLossObj.pic2" ng-model="reportLossObj.pic2">Attach Image 2</button>
+        <div class="text-center" ng-show="reportLossObj.pic2">
+          <img ng-src="{{reportLossObj.pic2}}"  height="270" width="300">
+        </div>
+        <button class="button button-block button-positive black" style="background-color: #d2d2d2 !important;" ng-click="getPicture('pic3')" ng-hide="reportLossObj.pic3" ng-model="reportLossObj.pic3">Attach Image 3</button>
+        <div class="text-center" ng-show="reportLossObj.pic3">
+          <img ng-src="{{reportLossObj.pic3}}"  height="270" width="300">
+        </div>
+      </fieldset>
+
+      <div class="padding-left" style="padding-top:16px">Date of Loss<span class="red-color">*</span></div>
+      <div class="padding-left" style="padding-top:16px">Day</div>
+       <select name="day" ng-change="datevalidation();" ng-model="reportLossObj.day_of_loss">
+        <option selected disabled>Day</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+
+      <div class="padding-left" style="padding-top:16px">Month</div>
+       <select name="Month" ng-change="monthvalidation();" ng-model="reportLossObj.month_of_loss">
+        <option selected disabled>Month</option>
+        <option value="01">Jan</option>
+        <option value="02">Feb</option>
+        <option value="03">Mar</option>
+        <option value="04">Apr</option>
+        <option value="05">May</option>
+        <option value="06">Jun</option>
+        <option value="07">Jul</option>
+        <option value="08">Aug</option>
+        <option value="09">Sep</option>
+        <option value="10">Oct</option>
+        <option value="11">Nov</option>
+        <option value="12">Dec</option>
+      </select>
+
+      <div class="padding-left" style="padding-top:16px">Year</div>
+       <select name="Year" ng-change="datecheck();" ng-model="reportLossObj.year_of_loss">
+        <option selected disabled>Year</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+      </select>
+
+      <form>
+        <fieldset>
+          <legend> <span style="padding: 0 3px;"><strong>Insurance Information</strong></span> </legend>
+          <div class="padding-left">Insurance Carrier Name</div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.insurance_carrier_name" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">Has a Claim Been Called In?</div>
+          <div style="padding-bottom: 16px;">
+            <span style="padding-left: 21px;">
+              <input type="radio" name="isClaimCalled" ng-model="reportLossObj.is_claim_called" value="Yes" style="margin-top: 7px;">
+              <label style="padding-left: 5px;">Yes</label>
+            </span>
+
+            <span style="padding-left: 21px;">
+              <input type="radio" name="isClaimCalled" ng-model="reportLossObj.is_claim_called" value="No" style="margin-top: 7px;">
+              <label style="padding-left: 5px;">No</label>
+            </span>
+          </div>
+
+          <div class="padding-left">Insurance Claim Number</div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.claim_number" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">Name of Insurance Adjuster</div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.name_insurance_adjuster" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">Insurance Adjuster Phone Number</div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.phone_insurance_adjuster" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">Name of Insurance Agent/Broker</div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.agent_name" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">Phone Number Agent/Broker</div>
+          <label class="item item-input">
+            <input type="text" ng-model="reportLossObj.agent_phone_number" next-on-enter ng-focus="hideTab()" ng-blur="showTab()">
+          </label>
+
+          <div class="padding-left">Comments</div>
+          <label class="item item-input">
+            <textarea rows="4" ng-model="reportLossObj.comments" next-on-enter ng-focus="hideTab()" ng-blur="showTab()"></textarea>
+          </label>
+
+        </fieldset>
+      </form>
+
+    </div>
+
+    <div class="text-center">
+      <button class="button button-assertive" style="width: 200px;" ng-click="Reportloss();">
+        SUBMIT
+      </button>
+      <!-- ng-click="sendMail(reportLossObj)" -->
+    </div>
+
+    <br><br><br><br>
+  </ion-content>
+</ion-view>

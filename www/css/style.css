@@ -1,0 +1,286 @@
+.has-tabs,
+.bar-footer.has-tabs {
+    top: 53px !important;
+}
+
+
+/*@media all and (orientation:landscape) {
+  .has-tabs, .bar-footer.has-tabs {
+        bottom: 104px;
+    }
+}*/
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.tabs {
+    bottom: 32px;
+    height: 62px;
+    border-color: #D24C17 !important;
+    background-color: #D24C17 !important;
+    color: #000000 !important;
+}
+
+.tabs-backgroud-dark {
+    border-color: #D24C17 !important;
+    background-color: #D24C17 !important;
+    color: #000000 !important;
+}
+
+.tab-item {
+    white-space: pre-line !important;
+}
+
+.bar-footer {
+    height: 32px !important;
+    display: block !important;
+}
+
+.orange-color {
+    color: #D14A15 !important;
+}
+
+.underline_text {
+    text-decoration: underline;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active,
+ion-tabs.tabs-color-active-positive .tab-item.active,
+ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: #fff !important;
+}
+
+.card-design {
+    /*border-top: 5px solid #EF8D4D;*/
+    border-radius: 7px;
+}
+
+.font-25 {
+    font-size: 25px;
+}
+
+ul {
+    list-style-type: square;
+    padding: 10px 0 0 25px !important;
+}
+
+.call-button {
+    border-color: transparent;
+    background-color: #D24C17;
+    color: #fff;
+    width: 90px;
+    height: 90px;
+    font-size: 60px;
+    padding-top: 15px;
+    box-shadow: 2px 3px 1px #7B7979;
+}
+
+.red-color {
+    color: red;
+}
+
+.item-input {
+    padding: 1px 0 1px 16px;
+    margin: 10px;
+    border-radius: 7px;
+    margin: 0 10px 20px 10px;
+}
+
+legend {
+    border: 0;
+    width: inherit;
+}
+
+fieldset {
+    margin: 10px;
+    padding: 10px;
+}
+
+select {
+    margin-left: 10px;
+    width: 95%;
+    height: 40px;
+    border: 0;
+}
+
+.item-divider {
+    background-color: #D1CECE;
+}
+
+.button.button-assertive {
+    border-color: transparent;
+    background-color: #D24C17;
+    color: #fff;
+}
+
+.white-space-normal {
+    white-space: normal !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.fs-36 {
+    font-size: 36px !important;
+}
+
+.linehigh {
+    line-height: 1.2 !important;
+}
+
+.m0 {
+    margin: 0px !important;
+}
+
+.mt-10 {
+    margin-top: -10px !important;
+}
+
+.black {
+    color: #000 !important;
+}
+
+.padd-left {
+    padding-left: 10px !important;
+}
+
+.lett-spec {
+    letter-spacing: 2px !important;
+}
+
+.logo-wrapper {
+    /*position: absolute;
+  top: 0;
+  bottom: 200px;
+  left: 40px;
+  right: 40px;*/
+    /* position: absolute; */
+    left: 40px;
+    right: 40px;
+    margin-top: 10px;
+}
+
+.description-wrapper {
+    /*position: absolute;*/
+    bottom: 64px;
+    left: 0;
+    right: 0;
+}
+
+.home-logo {
+    text-align: center;
+    width: 80%;
+}
+
+
+/*@media  (max-height:1366px) {
+ .home-logo{
+      height: 35vh;
+    }
+}
+
+@media  (max-height:719px) {
+ .home-logo{
+      height: 25vh;
+    }
+}
+
+@media (max-height:666px) {
+ .home-logo{
+      height: 20vh;
+    }
+}
+
+@media (max-height:400px) {
+ .home-logo{
+      height: 15vh;
+    }
+}*/
+
+@media(max-width:750px) and (max-height:1024px) {
+    .homelogo {
+        width: 70% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:550px) and (max-height:850px) {
+    .homelogo {
+        width: 70% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:320px) and (max-height:640px) {
+    .homelogo {
+        width: 80% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:420px) and (max-height:720px) {
+    .homelogo {
+        width: 60% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:320px) and (max-height:568px) {
+    .homelogo {
+        width: 75% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:375px) and (max-height:667px) {
+    .homelogo {
+        width: 80% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:412px) and (max-height:732px) {
+    .homelogo {
+        width: 80% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:1024px) and (max-height:1366px) {
+    .homelogo {
+        width: 80% !important;
+        height: 100% !important;
+    }
+}
+
+@media(max-width:720px) and (max-height:1280px) {
+    .homelogo {
+        width: 80% !important;
+        height: 100% !important;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-min-device-pixel-ratio: 4) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+    .homelogo {
+        width: 80% !important;
+        height: 100% !important;
+    }
+}

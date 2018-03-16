@@ -1,0 +1,8 @@
+{
+  "name": "CHANDLER",
+  "app_id": "ca645879",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
+}
